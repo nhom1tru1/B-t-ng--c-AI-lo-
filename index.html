@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhóm 1 - Tạo Nội Dung Bằng AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0057b8;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #0057b8;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003f8a;
+    }
+    .result {
+      background: #eee;
+      padding: 15px;
+      margin-top: 20px;
+      min-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tạo Nội Dung Bằng AI</h1>
+
+    <img src="robotic-data-monitoring_1302-13283.jpg" alt="AI illustration">
+
+    <p><strong>Giới thiệu:</strong> Nhóm chúng tôi đang nghiên cứu về dự án AI. Chúng tôi muốn giúp người dùng có thể nhanh chóng tạo được nhiều content bằng cách viết nội dung tự động.</p>
+
+    <label>Chủ đề:</label>
+    <input type="text" id="topic" placeholder="Ví dụ: Marketing, Công nghệ, Chăm sóc sức khỏe">
+
+    <label>Phong cách viết:</label>
+    <input type="text" id="style" placeholder="Ví dụ: Trang trọng, Thân thiện, Chuyên nghiệp">
+
+    <label>Chi tiết bổ sung:</label>
+    <textarea id="details" rows="4" placeholder="Ví dụ: Viết một bài viết về sự phát triển của công nghệ AI trong 5 năm qua."></textarea>
+
+    <button onclick="generateContent()">Tạo Nội Dung</button>
+
+    <h3>Kết quả:</h3>
+    <div class="result" id="output">Nội dung sẽ hiển thị ở đây...</div>
+  </div>
+
+  <script>
+    function generateContent() {
+      const topic = document.getElementById("topic").value;
+      const style = document.getElementById("style").value;
+      const details = document.getElementById("details").value;
+
+      // Đây là mô phỏng đơn giản, bạn có thể kết nối API AI sau này
+      const output = `
+        ✨ Chủ đề: ${topic}
+        📝 Phong cách: ${style}
+        📌 Nội dung: ${details.length > 0 ? details : 'Đang chờ bạn nhập thêm thông tin để tạo nội dung...'}
+      `;
+      document.getElementById("output").innerText = output;
+    }
+  </script>
+</body>
+</html>
